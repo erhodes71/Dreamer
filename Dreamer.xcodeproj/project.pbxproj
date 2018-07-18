@@ -15,6 +15,7 @@
 		C512E60920FD1C97004E8F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E60820FD1C97004E8F82 /* main.m */; };
 		C512E61320FD1C97004E8F82 /* DreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E61220FD1C97004E8F82 /* DreamerTests.m */; };
 		C512E61E20FD1C97004E8F82 /* DreamerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E61D20FD1C97004E8F82 /* DreamerUITests.m */; };
+		C5AE916120FEEF8A00B5BBDD /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C512E61920FD1C97004E8F82 /* DreamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C512E61D20FD1C97004E8F82 /* DreamerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamerUITests.m; sourceTree = "<group>"; };
 		C512E61F20FD1C97004E8F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				C512E5FC20FD1C96004E8F82 /* ViewController.h */,
 				C512E5FD20FD1C96004E8F82 /* ViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
+				C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */,
 				C512E60220FD1C97004E8F82 /* Assets.xcassets */,
 				C512E60420FD1C97004E8F82 /* LaunchScreen.storyboard */,
 				C512E60720FD1C97004E8F82 /* Info.plist */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5AE916120FEEF8A00B5BBDD /* ProfileView.xib in Resources */,
 				C512E60620FD1C97004E8F82 /* LaunchScreen.storyboard in Resources */,
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
