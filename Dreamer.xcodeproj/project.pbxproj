@@ -15,6 +15,9 @@
 		C512E60920FD1C97004E8F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E60820FD1C97004E8F82 /* main.m */; };
 		C512E61320FD1C97004E8F82 /* DreamerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E61220FD1C97004E8F82 /* DreamerTests.m */; };
 		C512E61E20FD1C97004E8F82 /* DreamerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C512E61D20FD1C97004E8F82 /* DreamerUITests.m */; };
+		C53CFDEE21004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
+		C53CFDEF21004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
+		C53CFDF021004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
 		C5AE916120FEEF8A00B5BBDD /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,7 @@
 		C512E61920FD1C97004E8F82 /* DreamerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C512E61D20FD1C97004E8F82 /* DreamerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamerUITests.m; sourceTree = "<group>"; };
 		C512E61F20FD1C97004E8F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C53CFDED21004CE000A8EF6A /* user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_icon.png; sourceTree = "<group>"; };
 		C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,7 @@
 				C512E60420FD1C97004E8F82 /* LaunchScreen.storyboard */,
 				C512E60720FD1C97004E8F82 /* Info.plist */,
 				C512E60820FD1C97004E8F82 /* main.m */,
+				C53CFDED21004CE000A8EF6A /* user_icon.png */,
 			);
 			path = Dreamer;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				C512E60620FD1C97004E8F82 /* LaunchScreen.storyboard in Resources */,
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
+				C53CFDEE21004CE000A8EF6A /* user_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53CFDEF21004CE000A8EF6A /* user_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C53CFDF021004CE000A8EF6A /* user_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
