@@ -18,7 +18,9 @@
 		C53CFDEE21004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
 		C53CFDEF21004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
 		C53CFDF021004CE000A8EF6A /* user_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDED21004CE000A8EF6A /* user_icon.png */; };
-		C5AE916120FEEF8A00B5BBDD /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */; };
+		C53CFDF32104F19400A8EF6A /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDF22104F19400A8EF6A /* mainViewController.m */; };
+		C53CFDFC210511D600A8EF6A /* mainFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */; };
+		C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +58,11 @@
 		C512E61D20FD1C97004E8F82 /* DreamerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamerUITests.m; sourceTree = "<group>"; };
 		C512E61F20FD1C97004E8F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C53CFDED21004CE000A8EF6A /* user_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_icon.png; sourceTree = "<group>"; };
-		C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		C53CFDF12104F19400A8EF6A /* mainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainViewController.h; sourceTree = "<group>"; };
+		C53CFDF22104F19400A8EF6A /* mainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainViewController.m; sourceTree = "<group>"; };
+		C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainFeedTableViewCell.xib; sourceTree = "<group>"; };
+		C53CFDFD2105127200A8EF6A /* mainFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainFeedTableViewCell.h; sourceTree = "<group>"; };
+		C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainFeedTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +118,11 @@
 				C512E5FC20FD1C96004E8F82 /* ViewController.h */,
 				C512E5FD20FD1C96004E8F82 /* ViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
-				C5AE916020FEEF8A00B5BBDD /* ProfileView.xib */,
+				C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */,
+				C53CFDFD2105127200A8EF6A /* mainFeedTableViewCell.h */,
+				C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */,
+				C53CFDF12104F19400A8EF6A /* mainViewController.h */,
+				C53CFDF22104F19400A8EF6A /* mainViewController.m */,
 				C512E60220FD1C97004E8F82 /* Assets.xcassets */,
 				C512E60420FD1C97004E8F82 /* LaunchScreen.storyboard */,
 				C512E60720FD1C97004E8F82 /* Info.plist */,
@@ -243,7 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5AE916120FEEF8A00B5BBDD /* ProfileView.xib in Resources */,
+				C53CFDFC210511D600A8EF6A /* mainFeedTableViewCell.xib in Resources */,
 				C512E60620FD1C97004E8F82 /* LaunchScreen.storyboard in Resources */,
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
@@ -275,8 +285,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C512E5FE20FD1C96004E8F82 /* ViewController.m in Sources */,
+				C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */,
 				C512E60920FD1C97004E8F82 /* main.m in Sources */,
 				C512E5FB20FD1C96004E8F82 /* AppDelegate.m in Sources */,
+				C53CFDF32104F19400A8EF6A /* mainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -434,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -448,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G442MF557V;
 				INFOPLIST_FILE = Dreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,6 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G442MF557V;
 				INFOPLIST_FILE = Dreamer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
