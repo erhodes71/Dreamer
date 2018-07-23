@@ -54,9 +54,27 @@
     //Will use setHidden to manage the two
     //[profileView setHidden:true];
     
+    
+    //----------------------------------------
+    //Load the data
+    
+    [self loadFeedData];
+    
+    
+    
 
     
 }
+
+-(void) loadFeedData
+{
+    //Make a request to load the series of ids of different feeds
+    //Then for each feed, pull the data from it and then create a new tableView cell with that data
+    //After each one please update the table view
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
