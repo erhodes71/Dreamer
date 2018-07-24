@@ -21,6 +21,7 @@
 		C53CFDF32104F19400A8EF6A /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDF22104F19400A8EF6A /* mainViewController.m */; };
 		C53CFDFC210511D600A8EF6A /* mainFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */; };
 		C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */; };
+		C53CFE012106A36A00A8EF6A /* globe_Dreamer.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = mainFeedTableViewCell.xib; sourceTree = "<group>"; };
 		C53CFDFD2105127200A8EF6A /* mainFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainFeedTableViewCell.h; sourceTree = "<group>"; };
 		C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainFeedTableViewCell.m; sourceTree = "<group>"; };
+		C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_Dreamer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				C512E60720FD1C97004E8F82 /* Info.plist */,
 				C512E60820FD1C97004E8F82 /* main.m */,
 				C53CFDED21004CE000A8EF6A /* user_icon.png */,
+				C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */,
 			);
 			path = Dreamer;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				C512E60620FD1C97004E8F82 /* LaunchScreen.storyboard in Resources */,
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
+				C53CFE012106A36A00A8EF6A /* globe_Dreamer.png in Resources */,
 				C53CFDEE21004CE000A8EF6A /* user_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
