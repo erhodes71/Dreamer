@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="817"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="OMd-gj-bwG">
             <objects>
-                <viewController id="enp-Mt-r8n" sceneMemberID="viewController">
+                <viewController id="enp-Mt-r8n" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uai-0m-KnO"/>
                         <viewControllerLayoutGuide type="bottom" id="Zpz-bF-Cb1"/>
@@ -255,11 +255,24 @@
                                 <rect key="frame" x="0.0" y="297" width="320" height="225"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="enp-Mt-r8n" id="fOd-E8-bQZ"/>
+                                    <outlet property="delegate" destination="enp-Mt-r8n" id="ii4-Mp-cFP"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="qDZ-Ru-s4c"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="pt5-X6-etl" id="vPj-8a-X7c"/>
+                        <outlet property="handleLabel" destination="LJe-Qx-ItU" id="o25-VR-Qwl"/>
+                        <outlet property="numberOfBelieversLabel" destination="3E4-XX-PJo" id="E07-GS-iHq"/>
+                        <outlet property="numberOfInvestersLabel" destination="CF5-pS-MaD" id="KJh-0m-jAK"/>
+                        <outlet property="percentLabel" destination="R79-32-be0" id="Dm9-wf-Ub3"/>
+                        <outlet property="tableView" destination="T9g-af-PaO" id="cWE-ZR-eMG"/>
+                        <outlet property="userNameLabel" destination="4FJ-aw-3z2" id="ZfL-oO-oyq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWl-8V-AkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
