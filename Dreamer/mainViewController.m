@@ -49,6 +49,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //Disables the user interagction until the users is logged in.
+    //Add this here
+    
     //This is to use before loading data
     //So it doesn't load any blanks
     //start = true;
@@ -109,10 +112,52 @@
         
     }
     
-    
+    //[self checkIfLoggedIn];
 
     
 }
+
+-(void)checkIfLoggedIn
+{
+    //This loads the users data
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString* userName = [prefs stringForKey:@"userID"];
+    
+    
+    NSString* accessToken = [prefs stringForKey:@"accessToken"];
+    
+    NSLog(@"%@", userName);
+    
+    if(userName == NULL)
+    {
+        //Send to the log in page
+        [self performSegueWithIdentifier:@"Login" sender:self];
+        NSLog(@"Test");
+
+        
+    }
+    
+    
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"Login"]) {
+        
+        // Get destination view
+        //LoginViewController *vc = [segue destinationViewController];
+        
+        //vc.cowName = [nameData objectAtIndex:currentIndex];
+        //NSLog(@"Cow Name: %@", [nameData objectAtIndex:currentIndex]);
+        
+        // Pass the information to your destination view
+        //[vc setSelectedButton:tagIndex];
+    }
+}
+
+
+
 
 -(void) loadSpecificFeedData: (NSString*) feedID
 {
