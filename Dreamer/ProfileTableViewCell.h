@@ -10,8 +10,11 @@
 
 @interface ProfileTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *test;
-
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *descrip;
+@property (weak, nonatomic) IBOutlet UILabel *percentage;
+@property (weak, nonatomic) IBOutlet UILabel *number;
 
 
 @end

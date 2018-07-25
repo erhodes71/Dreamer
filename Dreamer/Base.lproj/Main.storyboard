@@ -49,6 +49,17 @@
                                         <rect key="frame" x="8" y="12" width="58" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5D-zR-EGn">
+                                        <rect key="frame" x="263" y="44" width="57" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Uni-Xg-JOY" kind="presentation" animates="NO" id="sC0-Aa-ljG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67550203610000004" green="0.5726661864" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -100,6 +111,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.67550203610000004" green="0.5726661864" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" id="HZJ-pG-jau"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znx-7n-Cwn">
                                 <rect key="frame" x="89" y="174" width="143" height="30"/>
@@ -133,10 +147,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.67550203612049831" green="0.57266618640511413" blue="0.94587920984455964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oKl-j5-1QB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GXZ-CV-8fW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="816.54929577464793"/>
+            <point key="canvasLocation" x="139" y="892"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="OMd-gj-bwG">
@@ -190,7 +205,7 @@
                                         <rect key="frame" x="43" y="-34" width="63" height="62"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yik-lV-i7b">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yik-lV-i7b">
                                         <rect key="frame" x="108" y="0.0" width="107" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Direct Message"/>
@@ -220,7 +235,7 @@
                                         <rect key="frame" x="8" y="121" width="25" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.6515450236" green="0.52885216560000003" blue="0.85993498319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Believers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lv-52-33F">
@@ -234,7 +249,7 @@
                                         <rect key="frame" x="222" y="121" width="25" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.6515450236" green="0.52885216560000003" blue="0.85993498319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U03-DQ-uMF">
@@ -300,4 +315,7 @@
         <image name="globe_Dreamer.png" width="512" height="512"/>
         <image name="user_icon.png" width="2240" height="2240"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kxR-aH-Ogc"/>
+    </inferredMetricsTieBreakers>
 </document>
