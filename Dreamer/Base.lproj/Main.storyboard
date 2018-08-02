@@ -20,12 +20,23 @@
                     <view key="view" contentMode="scaleToFill" id="1qv-8z-2aa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVN-4D-jOi">
+                                <rect key="frame" x="123" y="530" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1181235263" green="1" blue="0.94203596170000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="testButton" destination="CVN-4D-jOi" id="19a-OR-k4h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghM-SN-0th" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-866" y="132"/>
+            <point key="canvasLocation" x="-866.25" y="130.98591549295776"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -48,9 +59,6 @@
                                 <state key="normal" title="Profile">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="enp-Mt-r8n" kind="presentation" animates="NO" id="kVz-7c-PbW"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDh-i6-42d">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
@@ -74,9 +82,6 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="Uni-Xg-JOY" kind="presentation" animates="NO" id="sC0-Aa-ljG"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67550203610000004" green="0.5726661864" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -106,7 +111,7 @@
         <!--View Controller-->
         <scene sceneID="dPr-Tm-g3f">
             <objects>
-                <viewController id="Uni-Xg-JOY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="Uni-Xg-JOY" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bls-xv-td3"/>
                         <viewControllerLayoutGuide type="bottom" id="NU2-TT-ZZP"/>
@@ -129,9 +134,6 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.67550203610000004" green="0.5726661864" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" id="HZJ-pG-jau"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znx-7n-Cwn">
                                 <rect key="frame" x="89" y="174" width="143" height="30"/>
@@ -174,7 +176,7 @@
         <!--Profile View Controller-->
         <scene sceneID="OMd-gj-bwG">
             <objects>
-                <viewController id="enp-Mt-r8n" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="enp-Mt-r8n" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uai-0m-KnO"/>
                         <viewControllerLayoutGuide type="bottom" id="Zpz-bF-Cb1"/>
@@ -190,9 +192,6 @@
                                 <state key="normal" title="Main-Feed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" animates="NO" id="kxR-aH-Ogc"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-rc-cXs">
                                 <rect key="frame" x="0.0" y="71" width="320" height="84"/>
@@ -333,8 +332,4 @@
         <image name="globe_Dreamer.png" width="512" height="512"/>
         <image name="user_icon.png" width="2240" height="2240"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="sC0-Aa-ljG"/>
-        <segue reference="HZJ-pG-jau"/>
-    </inferredMetricsTieBreakers>
 </document>

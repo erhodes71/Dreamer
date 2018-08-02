@@ -10,4 +10,6 @@
 
 @interface RootViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *testButton;
+
 @end
