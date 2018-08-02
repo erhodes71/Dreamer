@@ -19,6 +19,9 @@
     //UIView *mainFeed;
     //UIView *profileView;
     
+    UIViewController* createNewCampaignViewController;
+    
+    
     //Componenets of the tableView Cell
     NSMutableArray *idData;
     NSMutableArray *nameData;
@@ -366,6 +369,27 @@
     return 135;
     // This is just Programatic method you can also do that by xib !
 }
+
+- (IBAction)createNewCampaignButtonPressed:(id)sender {
+    
+    //This will grab a viewController
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    createNewCampaignViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateCampaignViewController"];
+    [self addChildViewController:createNewCampaignViewController];
+    [self.view addSubview:createNewCampaignViewController.view];
+    
+    /*createNewCampaignViewController = [[[NSBundle mainBundle] loadNibNamed:@"CreateCampaignViewController" owner:self options:nil] objectAtIndex:0];
+    //[self addChildViewController:createNewCampaignViewController];
+    [self.view addSubview:createNewCampaignViewController];*/
+}
+
+
+
+
+
 
 
 
