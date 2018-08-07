@@ -23,6 +23,9 @@
 		C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */; };
 		C53CFE012106A36A00A8EF6A /* globe_Dreamer.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */; };
 		C574FA2421080604000881D1 /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C574FA2321080604000881D1 /* user-icon.png */; };
+		C5868E52210A70A300E46C44 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5868E51210A70A300E46C44 /* RootViewController.m */; };
+		C5CB58EB2112B8400088B04A /* ExternalContent_Location_1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */; };
+		C5CB58EE2112BBD80088B04A /* CreateCampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */; };
 		C5CDEB592107B1450021807E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDEB582107B1450021807E /* ProfileViewController.m */; };
 		C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDEB5B2107B28D0021807E /* ProfileTableViewCell.m */; };
 		C5CDEB5E2107B28D0021807E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CDEB5C2107B28D0021807E /* ProfileTableViewCell.xib */; };
@@ -70,6 +73,11 @@
 		C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainFeedTableViewCell.m; sourceTree = "<group>"; };
 		C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_Dreamer.png; sourceTree = "<group>"; };
 		C574FA2321080604000881D1 /* user-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon.png"; sourceTree = "<group>"; };
+		C5868E50210A70A300E46C44 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		C5868E51210A70A300E46C44 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExternalContent_Location_1.storyboard; sourceTree = "<group>"; };
+		C5CB58EC2112BBD80088B04A /* CreateCampaignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateCampaignViewController.h; sourceTree = "<group>"; };
+		C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateCampaignViewController.m; sourceTree = "<group>"; };
 		C5CDEB572107B1450021807E /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		C5CDEB582107B1450021807E /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		C5CDEB5A2107B28D0021807E /* ProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
@@ -130,6 +138,11 @@
 				C512E5FC20FD1C96004E8F82 /* ViewController.h */,
 				C512E5FD20FD1C96004E8F82 /* ViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
+				C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */,
+				C5CB58EC2112BBD80088B04A /* CreateCampaignViewController.h */,
+				C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */,
+				C5868E50210A70A300E46C44 /* RootViewController.h */,
+				C5868E51210A70A300E46C44 /* RootViewController.m */,
 				C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */,
 				C53CFDFD2105127200A8EF6A /* mainFeedTableViewCell.h */,
 				C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */,
@@ -277,6 +290,7 @@
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
 				C5CDEB5E2107B28D0021807E /* ProfileTableViewCell.xib in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
+				C5CB58EB2112B8400088B04A /* ExternalContent_Location_1.storyboard in Resources */,
 				C574FA2421080604000881D1 /* user-icon.png in Resources */,
 				C53CFE012106A36A00A8EF6A /* globe_Dreamer.png in Resources */,
 				C53CFDEE21004CE000A8EF6A /* user_icon.png in Resources */,
@@ -307,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C512E5FE20FD1C96004E8F82 /* ViewController.m in Sources */,
+				C5CB58EE2112BBD80088B04A /* CreateCampaignViewController.m in Sources */,
 				C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */,
+				C5868E52210A70A300E46C44 /* RootViewController.m in Sources */,
 				C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */,
 				C512E60920FD1C97004E8F82 /* main.m in Sources */,
 				C512E5FB20FD1C96004E8F82 /* AppDelegate.m in Sources */,
