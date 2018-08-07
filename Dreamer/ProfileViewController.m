@@ -79,7 +79,9 @@
     
     //This is test information
     //Make sure to change
-    [self loadUserData:@"eric2"];
+    
+    //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
+    /*[self loadUserData:@"eric2"];
     
     //It will change to 1 if the information is returned
     while(feedLoaded == 0);
@@ -106,7 +108,7 @@
         
     }
 
-    
+    */
 }
 
 - (void)didReceiveMemoryWarning {

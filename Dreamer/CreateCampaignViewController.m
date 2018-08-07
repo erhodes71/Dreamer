@@ -79,7 +79,7 @@
 
 - (IBAction)goButtonPressed:(id)sender {
     
-    NSLog(@"Go button pressed!");
+    /*NSLog(@"Go button pressed!");
     
     [self checkIfReadyToSubmit];
     
@@ -98,7 +98,7 @@
     //If it needs to go again
     hold = 0;
     
-    
+    */
     //Move the file out of the way.
     [self.view setHidden:true];
 }

@@ -20,6 +20,9 @@
     UIViewController* main;
     UIViewController* profile;
     
+    UIViewController* createNewCampaignViewController;
+    UIViewController* portfolioViewController;
+    
 }
 
 - (void)viewDidLoad {
@@ -46,10 +49,17 @@
     [profile.view setHidden:true];
     [signIn.view setHidden:true];
     
+    [_portfolioButton setHidden:true];
+    
     //Use this to manage position of views
     //This will bring the button to front
     [self.view bringSubviewToFront:_mainButton];
+    [self.view bringSubviewToFront:_globeButton];
+    [self.view bringSubviewToFront:_portfolioButton];
+
 }
+
+
 
 - (IBAction)switchButtonPressed:(id)sender {
     NSLog(@"Switched Views");
@@ -59,17 +69,53 @@
     {
         [profile.view setHidden:true];
         [main.view setHidden:false];
+        [_globeButton setHidden:false];
+        [_portfolioButton setHidden:true];
+
         
     }else if([profile.view isHidden])
     {
         [profile.view setHidden:false];
         [main.view setHidden:true];
+        [_globeButton setHidden:true];
+        [_portfolioButton setHidden:false];
+
     }
     
     
 }
 
+- (IBAction)globeButtonPressed:(id)sender {
+    
+    //This will grab a viewController
+    
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    createNewCampaignViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateCampaignViewController"];
+    [self addChildViewController:createNewCampaignViewController];
+    [self.view addSubview:createNewCampaignViewController.view];
+    
+    //[self.view bringSubviewToFront:createNewCampaignViewController.view];
+    
+    /*createNewCampaignViewController = [[[NSBundle mainBundle] loadNibNamed:@"CreateCampaignViewController" owner:self options:nil] objectAtIndex:0];
+     //[self addChildViewController:createNewCampaignViewController];
+     [self.view addSubview:createNewCampaignViewController];*/
+}
 
+//
+- (IBAction)portfolioButtonPressed:(id)sender {
+    
+    //This will grab a viewController
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    portfolioViewController = [storyboard instantiateViewControllerWithIdentifier:@"PortfolioViewController"];
+    [self addChildViewController:portfolioViewController];
+    [self.view addSubview:portfolioViewController.view];
+    
+    
+}
 
 
 

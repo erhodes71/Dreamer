@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ow5-rZ-DVk">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,14 +29,37 @@
                                     <action selector="switchButtonPressed:" destination="ow5-rZ-DVk" eventType="touchUpInside" id="6Th-bt-Iab"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agk-ar-PTs">
+                                <rect key="frame" x="9" y="20" width="52" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="globe_Dreamer.png"/>
+                                <connections>
+                                    <action selector="globeButton:" destination="co2-eq-5dK" eventType="touchUpInside" id="ldA-cc-dgB"/>
+                                    <action selector="globeButtonPressed:" destination="ow5-rZ-DVk" eventType="touchUpInside" id="xsv-0p-uM8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Mn-on-Db2">
+                                <rect key="frame" x="239" y="29" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.59276730300000002" green="0.5027510556" blue="0.8410783678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Portfolio">
+                                    <color key="titleColor" name="controlLightHighlightColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="portfolioButtonPressed:" destination="ow5-rZ-DVk" eventType="touchUpInside" id="K7D-o1-dul"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="globeButton" destination="agk-ar-PTs" id="TJv-M8-Bna"/>
                         <outlet property="mainButton" destination="CVN-4D-jOi" id="bhR-ui-Xrc"/>
+                        <outlet property="portfolioButton" destination="5Mn-on-Db2" id="1vo-Zk-cMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghM-SN-0th" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="co2-eq-5dK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-866.25" y="130.98591549295776"/>
         </scene>
@@ -63,14 +86,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gU-uU-YpL">
-                                        <rect key="frame" x="8" y="22" width="52" height="48"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="globe_Dreamer.png"/>
-                                        <connections>
-                                            <action selector="createNewCampaignButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pp-VB-wm5"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.67550203610000004" green="0.5726661864" blue="0.94587920979999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -305,6 +320,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWl-8V-AkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="965.625" y="130.98591549295776"/>
+        </scene>
+        <!--Portfolio View Controller-->
+        <scene sceneID="WZJ-5K-I5G">
+            <objects>
+                <viewController storyboardIdentifier="PortfolioViewController" id="Hg0-Ed-djK" customClass="PortfolioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GCa-3H-ksV"/>
+                        <viewControllerLayoutGuide type="bottom" id="EzI-pa-Tdd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DDh-fx-O1m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UE5-H8-Cyg">
+                                <rect key="frame" x="0.0" y="439" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hg0-Ed-djK" id="Z0U-D6-48f"/>
+                                    <outlet property="delegate" destination="Hg0-Ed-djK" id="bNF-fD-WyU"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5A-6T-mjO">
+                                <rect key="frame" x="0.0" y="397" width="106" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6515450236" green="0.52885216560000003" blue="0.85993498319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Contributors">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contributorsButtonPressed:" destination="Hg0-Ed-djK" eventType="touchUpInside" id="aun-8Q-VSz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNi-Sh-Adc">
+                                <rect key="frame" x="107" y="397" width="106" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6515450236" green="0.52885216560000003" blue="0.85993498319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Investers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="investersButtonPressed:" destination="Hg0-Ed-djK" eventType="touchUpInside" id="FTF-nY-MkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6u-yp-LIq">
+                                <rect key="frame" x="214" y="397" width="106" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6515450236" green="0.52885216560000003" blue="0.85993498319999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Influencers">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="influencersButtonPressed:" destination="Hg0-Ed-djK" eventType="touchUpInside" id="KRX-0p-tcV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Graph for each." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvy-iJ-eaf">
+                                <rect key="frame" x="93" y="178" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jo-4q-GK2">
+                                <rect key="frame" x="130" y="20" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="user_icon.png"/>
+                                <connections>
+                                    <action selector="profileButtonPressed:" destination="Hg0-Ed-djK" eventType="touchUpInside" id="hAk-Wh-4HN"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FBr-lH-0UX">
+                                <rect key="frame" x="0.0" y="439" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hg0-Ed-djK" id="hID-0T-6vo"/>
+                                    <outlet property="delegate" destination="Hg0-Ed-djK" id="t3J-4d-g5A"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NYC-BG-tKF">
+                                <rect key="frame" x="0.0" y="439" width="320" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hg0-Ed-djK" id="TUE-6O-cxW"/>
+                                    <outlet property="delegate" destination="Hg0-Ed-djK" id="Sj4-Nd-cuW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59276730300000002" green="0.5027510556" blue="0.8410783678" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="contributorsTableView" destination="UE5-H8-Cyg" id="aRH-Vs-ZgL"/>
+                        <outlet property="influencersTableView" destination="NYC-BG-tKF" id="eln-dV-Gb6"/>
+                        <outlet property="investersTableView" destination="FBr-lH-0UX" id="S15-H9-HVe"/>
+                        <outlet property="profileButton" destination="1jo-4q-GK2" id="wkl-Ah-MbP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gE-KC-L7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1861.875" y="130.98591549295776"/>
         </scene>
     </scenes>
     <resources>

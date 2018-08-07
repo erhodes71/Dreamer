@@ -99,7 +99,9 @@
     //Load the data
     
     //start = false;
-    [self loadFeedData];
+    
+    //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
+    /*[self loadFeedData];
     while(feedLoaded == 0); //This is so that it waits until its done loading
     
     //This will call each method
@@ -113,7 +115,7 @@
         //Back to hold
         hold = 0;
         
-    }
+    }*/
     
     //[self checkIfLoggedIn];
 

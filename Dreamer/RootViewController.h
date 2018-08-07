@@ -12,4 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *mainButton;
 
+@property (weak, nonatomic) IBOutlet UIButton *globeButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *portfolioButton;
+
 @end
