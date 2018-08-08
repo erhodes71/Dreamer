@@ -132,11 +132,14 @@
         [_spinner setHidden:false];
         [_spinner startAnimating];
         
+        //TODO: Make loaded data
         //Make these values static for the moment
-        NSString* userName = @"Eric_Rhodes";
+        NSString* userName = @"Eric Rhodes";
+        userName = [userName stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         NSString* userID = @"eric2";
         
         NSString* title = _titleTextField.text;
+        title = [title stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         NSString* descript = _descriptionTextView.text;
         descript = [descript stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         NSString* money = _moneyTextField.text;

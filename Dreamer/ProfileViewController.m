@@ -111,6 +111,72 @@
     
 }
 
+//If reload button is pressed
+- (IBAction)reloadButtonPressed:(id)sender {
+    
+    [self initializeViewController];
+}
+
+-(void)initializeViewController
+{
+    //The initialization of the data array
+    data = [NSMutableArray arrayWithObjects:nil];
+    
+    //General information hold
+    feedLoaded = 0;
+    
+    //Initialize user general data
+    userID = @"";
+    
+    
+    //Initialize arrays for table view
+    idData = [NSMutableArray arrayWithObjects:nil];
+    nameData = [NSMutableArray arrayWithObjects:nil];
+    titleData = [NSMutableArray arrayWithObjects:nil];
+    descripData = [NSMutableArray arrayWithObjects: nil];
+    percentData = [NSMutableArray arrayWithObjects:nil];
+    numberData = [NSMutableArray arrayWithObjects:nil];
+    
+    
+    
+    //TODO:
+    //Use same method for adding data to the table as the other view controller
+    
+    //LoadUser Information
+    
+    //This is test information
+    //Make sure to change
+    
+    //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
+    [self loadUserData:@"eric2"];
+    
+    //It will change to 1 if the information is returned
+    while(feedLoaded == 0);
+    
+    //Add the values to the view
+    _percentLabel.text = self->percent;
+    _userNameLabel.text = self->userID;//I guess this is going to be the name
+    _handleLabel.text = self->handle;
+    _addressLabel.text = self->address;
+    _numberOfBelieversLabel.text = self->number_believer;
+    _numberOfInvestersLabel.text = self->number_investers;
+    
+    //Now load the feed/campaign data
+    //This will call each method
+    for(NSString *s in campaigns)
+    {
+        NSLog(@"%@", s);
+        //Now make a call to the server to get the appropriate feedid
+        [self loadSpecificFeedData:s];
+        while(hold == 0);
+        
+        //Back to hold
+        hold = 0;
+        
+    }
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

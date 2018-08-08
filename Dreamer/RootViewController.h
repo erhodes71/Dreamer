@@ -16,4 +16,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *portfolioButton;
 
+
+
+-(void)sendToOtherViewController;
+
 @end

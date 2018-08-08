@@ -25,6 +25,7 @@
 		C574FA2421080604000881D1 /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C574FA2321080604000881D1 /* user-icon.png */; };
 		C5819CBE211B4F740008160C /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5819CBD211B4F740008160C /* back_button.png */; };
 		C5868E52210A70A300E46C44 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5868E51210A70A300E46C44 /* RootViewController.m */; };
+		C5C2475F211B8E1900598D5E /* CampaignPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */; };
 		C5CB58EB2112B8400088B04A /* ExternalContent_Location_1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */; };
 		C5CB58EE2112BBD80088B04A /* CreateCampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */; };
 		C5CDEB592107B1450021807E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDEB582107B1450021807E /* ProfileViewController.m */; };
@@ -80,6 +81,8 @@
 		C5819CBD211B4F740008160C /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
 		C5868E50210A70A300E46C44 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		C5868E51210A70A300E46C44 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		C5C2475D211B8E1900598D5E /* CampaignPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CampaignPageViewController.h; sourceTree = "<group>"; };
+		C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampaignPageViewController.m; sourceTree = "<group>"; };
 		C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExternalContent_Location_1.storyboard; sourceTree = "<group>"; };
 		C5CB58EC2112BBD80088B04A /* CreateCampaignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateCampaignViewController.h; sourceTree = "<group>"; };
 		C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateCampaignViewController.m; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				C512E5FD20FD1C96004E8F82 /* ViewController.m */,
 				C5FAA663211A31AF0069F9AE /* PortfolioViewController.h */,
 				C5FAA664211A31AF0069F9AE /* PortfolioViewController.m */,
+				C5C2475D211B8E1900598D5E /* CampaignPageViewController.h */,
+				C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
 				C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */,
 				C5CB58EC2112BBD80088B04A /* CreateCampaignViewController.h */,
@@ -341,6 +346,7 @@
 				C512E5FE20FD1C96004E8F82 /* ViewController.m in Sources */,
 				C5CB58EE2112BBD80088B04A /* CreateCampaignViewController.m in Sources */,
 				C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */,
+				C5C2475F211B8E1900598D5E /* CampaignPageViewController.m in Sources */,
 				C5FAA665211A31AF0069F9AE /* PortfolioViewController.m in Sources */,
 				C5868E52210A70A300E46C44 /* RootViewController.m in Sources */,
 				C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */,

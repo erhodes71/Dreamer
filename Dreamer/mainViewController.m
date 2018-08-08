@@ -8,6 +8,7 @@
 
 #import "mainViewController.h"
 #import "mainFeedTableViewCell.h"
+#import "RootViewController.h"
 
 @interface mainViewController ()
 
@@ -359,6 +360,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+//If that cell is selected
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%ld", (long)indexPath.row);
+    
+    
+    //
+    /*RootViewController *v = (RootViewController*)self.view.superclass;
+    [v sendToOtherViewController];*/
+    
+    
+    
+    
+    
+    
+    
 }
 
 

@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "mainViewController.h"
+#import "CreateCampaignViewController.h"
 
 @interface RootViewController ()
 
@@ -22,6 +23,11 @@
     
     UIViewController* createNewCampaignViewController;
     UIViewController* portfolioViewController;
+    
+    UIViewController* campaignPageViewController;
+    
+    
+    UIViewController* extraViewController;
     
 }
 
@@ -89,12 +95,20 @@
     
     //This will grab a viewController
     
-    
+    //This is the one that is going to be used
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
     
     createNewCampaignViewController = [storyboard instantiateViewControllerWithIdentifier:@"CreateCampaignViewController"];
     [self addChildViewController:createNewCampaignViewController];
     [self.view addSubview:createNewCampaignViewController.view];
+    
+    
+    //This is for a test
+    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    campaignPageViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
+    [self addChildViewController:campaignPageViewController];
+    [self.view addSubview:campaignPageViewController.view];*/
     
     //[self.view bringSubviewToFront:createNewCampaignViewController.view];
     
@@ -114,6 +128,16 @@
     [self addChildViewController:portfolioViewController];
     [self.view addSubview:portfolioViewController.view];
     
+    
+}
+
+-(void)sendToOtherViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    extraViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
+    [self addChildViewController:extraViewController];
+    [self.view addSubview:extraViewController.view];
     
 }
 
