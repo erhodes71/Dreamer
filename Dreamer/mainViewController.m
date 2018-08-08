@@ -101,7 +101,7 @@
     //start = false;
     
     //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
-    /*[self loadFeedData];
+    [self loadFeedData];
     while(feedLoaded == 0); //This is so that it waits until its done loading
     
     //This will call each method
@@ -115,11 +115,46 @@
         //Back to hold
         hold = 0;
         
-    }*/
+    }
     
     //[self checkIfLoggedIn];
 
     
+}
+
+-(void)initializationOfMainViewController
+{
+    idData = [NSMutableArray arrayWithObjects:nil];
+    nameData = [NSMutableArray arrayWithObjects:nil];
+    titleData = [NSMutableArray arrayWithObjects:nil];
+    descripData = [NSMutableArray arrayWithObjects: nil];
+    percentData = [NSMutableArray arrayWithObjects:nil];
+    numberData = [NSMutableArray arrayWithObjects:nil];
+    
+    
+    //These are markers so that it can continue after call.
+    feedLoaded = 0;
+    hold = 0;//This is for multiple loads.
+    
+    
+    //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
+    [self loadFeedData];
+    while(feedLoaded == 0); //This is so that it waits until its done loading
+    
+    //This will call each method
+    for(NSString *s in feedsArray)
+    {
+        NSLog(@"%@", s);
+        //Now make a call to the server to get the appropriate feedid
+        [self loadSpecificFeedData:s];
+        while(hold == 0);
+        
+        //Back to hold
+        hold = 0;
+        
+    }
+    
+    //[self checkIfLoggedIn];
 }
 
 -(void)checkIfLoggedIn
@@ -144,6 +179,12 @@
     
     
     
+}
+
+//Reloads the data
+- (IBAction)reloadDataButtonPressed:(id)sender {
+    
+    [self initializationOfMainViewController];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

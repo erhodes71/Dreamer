@@ -158,6 +158,17 @@
                                 <rect key="frame" x="153" y="535" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzA-8A-9JW">
+                                <rect key="frame" x="6" y="533" width="31" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel" image="back_button.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="qKO-pS-FoP" eventType="touchUpInside" id="YYW-kq-9ZO"/>
+                                    <action selector="goButtonPressed:" destination="qKO-pS-FoP" eventType="touchUpInside" id="QDW-nG-NjN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82358511700000003" green="0.60130205619999999" blue="0.99833362309999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -176,4 +187,7 @@
             <point key="canvasLocation" x="63.75" y="44.366197183098592"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back_button.png" width="1600" height="1600"/>
+    </resources>
 </document>

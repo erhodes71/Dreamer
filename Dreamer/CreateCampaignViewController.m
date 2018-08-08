@@ -57,6 +57,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//Returns user to the main screen
+- (IBAction)backButtonPressed:(id)sender {
+    
+    [self.view setHidden:true];
+}
+
+
+
+
+
 //Changes the value to Cash
 - (IBAction)profitButtonPressed:(id)sender {
     value = @"Cash";
@@ -79,28 +90,36 @@
 
 - (IBAction)goButtonPressed:(id)sender {
     
-    /*NSLog(@"Go button pressed!");
+    NSLog(@"Go button pressed!");
     
     [self checkIfReadyToSubmit];
     
-    //Adds the campaign
-    [self addCampaign];
-    
-    //Wait til its finished loading
-    while(hold == 0);
-    
-    //Starts the spinner
-    [_spinner stopAnimating];
-    [_spinner setHidden:true];
-
-    
-    
-    //If it needs to go again
-    hold = 0;
-    
-    */
-    //Move the file out of the way.
-    [self.view setHidden:true];
+    if(readyToSubmit){
+        
+        //Adds the campaign
+        [self addCampaign];
+        
+        //Wait til its finished loading
+        while(hold == 0);
+        
+        //Starts the spinner
+        [_spinner stopAnimating];
+        [_spinner setHidden:true];
+        
+        
+        
+        //If it needs to go again
+        hold = 0;
+        
+        
+        //Move the file out of the way.
+        [self.view setHidden:true];
+        
+    }else{
+        
+        [_warningView setHidden:false];
+        
+    }
 }
 
 //Add the campaign
