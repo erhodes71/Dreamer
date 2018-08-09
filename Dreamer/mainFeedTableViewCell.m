@@ -14,7 +14,24 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    
+    //Get users data
+    
+    
 }
+
+
+- (IBAction)heartButtonPressed:(id)sender {
+    
+    //send request to add a heart and then update this field
+    
+}
+
+
+
+
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

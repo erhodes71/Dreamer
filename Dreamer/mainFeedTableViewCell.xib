@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EQ Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmU-Ke-iLE">
-                        <rect key="frame" x="6" y="72" width="140" height="21"/>
+                        <rect key="frame" x="6" y="71" width="140" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <nil key="textColor"/>
@@ -64,6 +64,9 @@
                         <state key="normal" title="Heart">
                             <color key="titleColor" red="0.98030739249999999" green="0.1786796353" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="heartButtonPressed:" destination="y0P-zG-GTY" eventType="touchUpInside" id="shY-w5-djt"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FPo-05-3zi">
                         <rect key="frame" x="314" y="104" width="56" height="30"/>
@@ -73,7 +76,7 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KE-WT-1FR">
-                        <rect key="frame" x="118" y="104" width="60" height="30"/>
+                        <rect key="frame" x="125" y="104" width="47" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <state key="normal" title="Reload"/>
                     </button>
