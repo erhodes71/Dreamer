@@ -380,6 +380,52 @@
 
 }
 
+//--- To get current index items ---
+
+//Gets the username
+-(NSString*)getCurrentIndexID
+{
+    return idData[self->currentIndex];
+}
+
+//Gets the name
+-(NSString*)getCurrentIndexName
+{
+    return nameData[self->currentIndex];
+}
+
+//Gets the Title
+-(NSString*)getCurrentIndexTitle
+{
+    return titleData[self->currentIndex];
+}
+
+//Gets the description
+-(NSString*)getCurrentIndexDescription
+{
+    return descripData[self->currentIndex];
+}
+
+//Gets the percent
+-(NSString*)getCurrentIndexPercent
+{
+    return percentData[self->currentIndex];
+}
+
+//Gets the Number
+-(NSString*)getCurrentIndexNumber
+{
+    return numberData[self->currentIndex];
+}
+
+// --- ---
+
+-(void)showRootViewButtons
+{
+    
+    
+}
+
 
 
 

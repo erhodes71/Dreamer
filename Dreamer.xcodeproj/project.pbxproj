@@ -32,6 +32,7 @@
 		C5CDEB592107B1450021807E /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDEB582107B1450021807E /* ProfileViewController.m */; };
 		C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CDEB5B2107B28D0021807E /* ProfileTableViewCell.m */; };
 		C5CDEB5E2107B28D0021807E /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CDEB5C2107B28D0021807E /* ProfileTableViewCell.xib */; };
+		C5E84B3E211CC5DC00CCD4F1 /* ContributeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5E84B3D211CC5DC00CCD4F1 /* ContributeViewController.m */; };
 		C5FAA665211A31AF0069F9AE /* PortfolioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FAA664211A31AF0069F9AE /* PortfolioViewController.m */; };
 		C5FAA66B211A35030069F9AE /* ContributorsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FAA669211A35030069F9AE /* ContributorsTableViewCell.m */; };
 		C5FAA66C211A35030069F9AE /* ContributorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FAA66A211A35030069F9AE /* ContributorsTableViewCell.xib */; };
@@ -94,6 +95,8 @@
 		C5CDEB5A2107B28D0021807E /* ProfileTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewCell.h; sourceTree = "<group>"; };
 		C5CDEB5B2107B28D0021807E /* ProfileTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewCell.m; sourceTree = "<group>"; };
 		C5CDEB5C2107B28D0021807E /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		C5E84B3C211CC5DC00CCD4F1 /* ContributeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContributeViewController.h; sourceTree = "<group>"; };
+		C5E84B3D211CC5DC00CCD4F1 /* ContributeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContributeViewController.m; sourceTree = "<group>"; };
 		C5FAA663211A31AF0069F9AE /* PortfolioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PortfolioViewController.h; sourceTree = "<group>"; };
 		C5FAA664211A31AF0069F9AE /* PortfolioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PortfolioViewController.m; sourceTree = "<group>"; };
 		C5FAA668211A35030069F9AE /* ContributorsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContributorsTableViewCell.h; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
 				C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */,
+				C5E84B3C211CC5DC00CCD4F1 /* ContributeViewController.h */,
+				C5E84B3D211CC5DC00CCD4F1 /* ContributeViewController.m */,
 				C5944CD4211C9A8400533059 /* UserViewOfProfileViewController.h */,
 				C5944CD5211C9A8400533059 /* UserViewOfProfileViewController.m */,
 				C5CB58EC2112BBD80088B04A /* CreateCampaignViewController.h */,
@@ -353,6 +358,7 @@
 				C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */,
 				C5C2475F211B8E1900598D5E /* CampaignPageViewController.m in Sources */,
 				C5FAA665211A31AF0069F9AE /* PortfolioViewController.m in Sources */,
+				C5E84B3E211CC5DC00CCD4F1 /* ContributeViewController.m in Sources */,
 				C5944CD6211C9A8400533059 /* UserViewOfProfileViewController.m in Sources */,
 				C5868E52210A70A300E46C44 /* RootViewController.m in Sources */,
 				C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */,

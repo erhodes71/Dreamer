@@ -9,6 +9,7 @@
 #import "CampaignPageViewController.h"
 #import "mainViewController.h"
 #import "UserViewOfProfileViewController.h"
+#import "ProfileViewController.h"
 
 @interface CampaignPageViewController ()
 
@@ -27,17 +28,43 @@
     
     //Load the data of the user selected
     //This information can be done through the previous view
-    NSString* userID = [(mainViewController*)self.parentViewController getCurrentIndexID];
     
-    NSString* userName = [(mainViewController*)self.parentViewController getCurrentIndexName];
+    NSString* userID;
+    NSString* userName;
+    NSString* title;
+    NSString* description;
+    NSString* percent;
+    NSString* number;
     
-    NSString* title = [(mainViewController*)self.parentViewController getCurrentIndexTitle];
+    if ([self.parentViewController isKindOfClass:[mainViewController class]])
+    {
+        userID = [(mainViewController*)self.parentViewController getCurrentIndexID];
+        
+        userName = [(mainViewController*)self.parentViewController getCurrentIndexName];
+        
+        title = [(mainViewController*)self.parentViewController getCurrentIndexTitle];
+        
+        description = [(mainViewController*)self.parentViewController getCurrentIndexDescription];
+        
+        percent = [(mainViewController*)self.parentViewController getCurrentIndexPercent];
+        
+        number = [(mainViewController*)self.parentViewController getCurrentIndexNumber];
+    }else{
+        
+        userID = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexID];
+        
+        userName = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexName];
+        
+        title = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexTitle];
+        
+        description = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexDescription];
+        
+        percent = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexPercent];
+        
+        number = [(UserViewOfProfileViewController*)self.parentViewController getCurrentIndexNumber];
+    }
     
-    NSString* description = [(mainViewController*)self.parentViewController getCurrentIndexDescription];
     
-    NSString* percent = [(mainViewController*)self.parentViewController getCurrentIndexPercent];
-    
-    NSString* number = [(mainViewController*)self.parentViewController getCurrentIndexNumber];
     
     NSLog(@"%@", userID);
     NSLog(@"%@", userName);
@@ -88,7 +115,14 @@
     
     [self.view setHidden:true];
     [self.view removeFromSuperview];
-    [(mainViewController*)self.parentViewController showRootViewButtons];
+    
+    if ([self.parentViewController isKindOfClass:[mainViewController class]])
+    {
+        [(mainViewController*)self.parentViewController showRootViewButtons];
+    }else{
+    
+        [(ProfileViewController*)self.parentViewController showRootViewButtons];
+    }
 }
 
 

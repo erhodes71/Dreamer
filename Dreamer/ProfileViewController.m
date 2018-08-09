@@ -118,6 +118,13 @@
     
 }
 
+//This is used to call the parent to bring back the buttons
+-(void)showRootViewButtons
+{
+    [(RootViewController*)self.parentViewController bringBackButtons_side2];
+    
+}
+
 
 //--- To get current index items ---
 
@@ -443,24 +450,28 @@
 //Needs to be able to take it to a window
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"%ld", (long)indexPath.row);
-    //NSLog(@"%@", currentIndex);
+    NSLog(@"%ld", (long)indexPath.row);
+    NSLog(@"%@", currentIndex);
     
-    /*currentIndex = (int)indexPath.row;
+    currentIndex = (int)indexPath.row;
+    
+    
+    [(RootViewController*)self.parentViewController hideButtons_side2];
+    
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
     
     campaignInfoViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
     [self addChildViewController:campaignInfoViewController];
     [self.view addSubview:campaignInfoViewController.view];
-    */
+    
     
     //
     /*RootViewController *v = (RootViewController*)self.view.superclass;
      [v sendToOtherViewController];*/
     
     //Hides the buttons
-    //[(RootViewController*)self.parentViewController hideButtons_side2];
+    [(RootViewController*)self.parentViewController hideButtons_side2];
     
     
     

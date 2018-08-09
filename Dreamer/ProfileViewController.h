@@ -19,4 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *numberOfInvestersLabel;
 
 
+-(void)showRootViewButtons;
+
+
 @end

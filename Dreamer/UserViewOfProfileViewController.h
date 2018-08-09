@@ -17,4 +17,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfBelieversLabel;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfInvestersLabel;
+
+-(NSString*)getCurrentIndexID;
+-(NSString*)getCurrentIndexName;
+-(NSString*)getCurrentIndexTitle;
+-(NSString*)getCurrentIndexDescription;
+-(NSString*)getCurrentIndexPercent;
+-(NSString*)getCurrentIndexNumber;
+
 @end
