@@ -19,5 +19,9 @@
 
 
 -(void)sendToOtherViewController;
+-(void)hideButtons_side1;
+-(void)bringBackButtons_side1;
+-(void)bringBackButtons_side2;
+-(void)hideButtons_side2;
 
 @end

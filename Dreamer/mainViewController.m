@@ -22,6 +22,8 @@
     
     UIViewController* createNewCampaignViewController;
     
+    UIViewController* extraViewController;
+    
     
     //Componenets of the tableView Cell
     NSMutableArray *idData;
@@ -363,10 +365,76 @@
 }
 
 
+-(void)showRootViewButtons
+{
+    [(RootViewController*)self.parentViewController bringBackButtons_side1];
+    
+}
+
+//Gets the username
+-(NSString*)getCurrentIndexID
+{
+    return idData[self->currentIndex];
+}
+
+//Gets the name
+-(NSString*)getCurrentIndexName
+{
+    return nameData[self->currentIndex];
+}
+
+//Gets the Title
+-(NSString*)getCurrentIndexTitle
+{
+    return titleData[self->currentIndex];
+}
+
+//Gets the description
+-(NSString*)getCurrentIndexDescription
+{
+    return descripData[self->currentIndex];
+}
+
+//Gets the percent
+-(NSString*)getCurrentIndexPercent
+{
+    return percentData[self->currentIndex];
+}
+
+//Gets the Number
+-(NSString*)getCurrentIndexNumber
+{
+    return numberData[self->currentIndex];
+}
+
+
+
+
+
+
 //If that cell is selected
+//Needs to be able to take it to a window
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld", (long)indexPath.row);
+    //NSLog(@"%@", currentIndex);
+    
+    //This is how to access parent view controller!
+    //This is used to get rid of the buttons while working with the view
+    [(RootViewController*)self.parentViewController hideButtons_side1];
+    
+    //Sets the current index
+    self->currentIndex = (int)indexPath.row;
+    
+    
+    
+    
+    //Changes the view
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    extraViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
+    [self addChildViewController:extraViewController];
+    [self.view addSubview:extraViewController.view];
     
     
     //

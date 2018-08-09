@@ -131,14 +131,49 @@
     
 }
 
+//Brings back the buttons
+-(void)bringBackButtons_side2
+{
+    [_portfolioButton setHidden:false];
+    [_mainButton setHidden:false];
+    
+}
+
+//Hides the buttons
+-(void)hideButtons_side2
+{
+    [_portfolioButton setHidden:true];
+    [_mainButton setHidden:true];
+    
+}
+
+
+//Brings back the buttons
+-(void)bringBackButtons_side1
+{
+    [_globeButton setHidden:false];
+    [_mainButton setHidden:false];
+    
+}
+
+//Hides the buttons
+-(void)hideButtons_side1
+{
+    [_globeButton setHidden:true];
+    [_mainButton setHidden:true];
+    
+}
+
 -(void)sendToOtherViewController
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
     
     extraViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
     [self addChildViewController:extraViewController];
     [self.view addSubview:extraViewController.view];
+    */
     
+    NSLog(@"THIS IS A TEST");
 }
 
 

@@ -1,25 +1,28 @@
 //
-//  ProfileViewController.m
+//  UserViewOfProfileViewController.m
 //  Dreamer
 //
-//  Created by Eric Rhodes on 7/24/18.
+//  Created by Eric Rhodes on 8/9/18.
 //  Copyright © 2018 Eric Rhodes. All rights reserved.
 //
 
-#import "ProfileViewController.h"
-#import "ProfileTableViewCell.h"
-#import "RootViewController.h"
 
-@interface ProfileViewController ()
+//TODO:
+//  Need to change it so that it is information about the user that was clicked on.
+
+
+#import "UserViewOfProfileViewController.h"
+#import "ProfileTableViewCell.h"
+
+@interface UserViewOfProfileViewController ()
 
 @end
 
-@implementation ProfileViewController
+@implementation UserViewOfProfileViewController
 {
-    //The current index
+    
     int currentIndex;
     
-    //The campaign that is selected
     UIViewController* campaignInfoViewController;
     
     NSMutableArray *data;
@@ -45,133 +48,31 @@
     //NOTE: This array comes in same way as others above
     //      It will require a new request to be made.
     NSArray *campaigns;
-
+    
     //For general information loading
     int feedLoaded;
     
     //This is for the different values of feeds that are loaded
     //  Same function as the feedLoaded variable
     int hold;
-    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    //The initialization of the data array
-    data = [NSMutableArray arrayWithObjects:nil];
-    
-    //General information hold
-    feedLoaded = 0;
-    
-    //Initialize user general data
-    userID = @"";
-    
-    
-    //Initialize arrays for table view
-    idData = [NSMutableArray arrayWithObjects:nil];
-    nameData = [NSMutableArray arrayWithObjects:nil];
-    titleData = [NSMutableArray arrayWithObjects:nil];
-    descripData = [NSMutableArray arrayWithObjects: nil];
-    percentData = [NSMutableArray arrayWithObjects:nil];
-    numberData = [NSMutableArray arrayWithObjects:nil];
-
-
-    
-    //TODO:
-    //Use same method for adding data to the table as the other view controller
-    
-    //LoadUser Information
-    
-    //This is test information
-    //Make sure to change
-    
-    //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
-    [self loadUserData:@"eric2"];
-    
-    //It will change to 1 if the information is returned
-    while(feedLoaded == 0);
-    
-    //Add the values to the view
-    _percentLabel.text = self->percent;
-    _userNameLabel.text = self->userID;//I guess this is going to be the name
-    _handleLabel.text = self->handle;
-    _addressLabel.text = self->address;
-    _numberOfBelieversLabel.text = self->number_believer;
-    _numberOfInvestersLabel.text = self->number_investers;
-    
-    //Now load the feed/campaign data
-    //This will call each method
-    for(NSString *s in campaigns)
-    {
-        NSLog(@"%@", s);
-        //Now make a call to the server to get the appropriate feedid
-        [self loadSpecificFeedData:s];
-        while(hold == 0);
-        
-        //Back to hold
-        hold = 0;
-        
-    }
-
-    
-}
-
-
-//--- To get current index items ---
-
-//Gets the username
--(NSString*)getCurrentIndexID
-{
-    return idData[self->currentIndex];
-}
-
-//Gets the name
--(NSString*)getCurrentIndexName
-{
-    return nameData[self->currentIndex];
-}
-
-//Gets the Title
--(NSString*)getCurrentIndexTitle
-{
-    return titleData[self->currentIndex];
-}
-
-//Gets the description
--(NSString*)getCurrentIndexDescription
-{
-    return descripData[self->currentIndex];
-}
-
-//Gets the percent
--(NSString*)getCurrentIndexPercent
-{
-    return percentData[self->currentIndex];
-}
-
-//Gets the Number
--(NSString*)getCurrentIndexNumber
-{
-    return numberData[self->currentIndex];
-}
-
-// --- ---
-
-
-
-
-
-
-//If reload button is pressed
-- (IBAction)reloadButtonPressed:(id)sender {
-    
+    //Initializes the view controller
     [self initializeViewController];
+    
+    
 }
+
 
 -(void)initializeViewController
 {
+    //Current Index
+    currentIndex = 0;
+    
     //The initialization of the data array
     data = [NSMutableArray arrayWithObjects:nil];
     
@@ -230,11 +131,7 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 
-}
 
 //This takes the the campaigns array and generates the tabels view cells to accompany it.
 -(void)loadSpecificFeedData: (NSString*) feedID
@@ -386,7 +283,7 @@
             //Also from request
             NSString *campaig_combined = [responseObj objectForKey:@"campaigns"];
             self->campaigns = [campaig_combined componentsSeparatedByString:@","];
-
+            
             
             self->feedLoaded = 1;
             
@@ -438,38 +335,62 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 135;//Might have to change the size
+    // This is just Programatic method you can also do that by xib !
+}
+
+//Brings back to the previous view
+- (IBAction)backButtonPressed:(id)sender {
+    [self.view setHidden:true];
+    [self.view removeFromSuperview];
+    
+}
+
+/*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+ 
+ userViewOfProfileViewController = [storyboard instantiateViewControllerWithIdentifier:@"UserViewOfProfileViewController"];
+ [self addChildViewController:userViewOfProfileViewController];
+ [self.view addSubview:userViewOfProfileViewController.view];
+ */
+
 
 //If that cell is selected
 //Needs to be able to take it to a window
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSLog(@"%ld", (long)indexPath.row);
+    NSLog(@"%ld", (long)indexPath.row);
     //NSLog(@"%@", currentIndex);
     
-    /*currentIndex = (int)indexPath.row;
+    currentIndex = (int)indexPath.row;
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
     
     campaignInfoViewController = [storyboard instantiateViewControllerWithIdentifier:@"CampaignPageViewController"];
     [self addChildViewController:campaignInfoViewController];
     [self.view addSubview:campaignInfoViewController.view];
-    */
+    
     
     //
     /*RootViewController *v = (RootViewController*)self.view.superclass;
      [v sendToOtherViewController];*/
     
-    //Hides the buttons
-    //[(RootViewController*)self.parentViewController hideButtons_side2];
     
-    
-    
+
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 135;//Might have to change the size
-    // This is just Programatic method you can also do that by xib !
+
+
+
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

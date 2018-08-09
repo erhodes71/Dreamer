@@ -14,6 +14,15 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+-(NSString*)getCurrentIndexID;
+-(NSString*)getCurrentIndexName;
+-(NSString*)getCurrentIndexTitle;
+-(NSString*)getCurrentIndexDescription;
+-(NSString*)getCurrentIndexPercent;
+-(NSString*)getCurrentIndexNumber;
+
+-(void)showRootViewButtons;
+
 
 
 @end
