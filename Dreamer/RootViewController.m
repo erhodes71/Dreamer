@@ -147,30 +147,14 @@
         NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
         NSLog(@"requestReply: %@", requestReply);//This works well in getting the data
         
-        //Convert the data to a managable format
-        NSData* jsonData = [requestReply dataUsingEncoding:NSUTF8StringEncoding];
-        //NSError *error = nil;
-        NSDictionary *responseObj = [NSJSONSerialization
-                                     JSONObjectWithData:jsonData
-                                     options:0
-                                     error:&error];
-        
-        if(! error) {
+        if([requestReply isEqualToString:@"true"])
+        {
+            self->returnValue = @"true";
             
-            if([requestReply isEqualToString:@"true"])
-            {
-                self->returnValue = @"true";
-                
-            }else{
-                self->returnValue = @"false";
-
-            }
+        }else{
+            self->returnValue = @"false";
             
-            
-        } else {
-            NSLog(@"Error in parsing JSON");
         }
-        //NSLog(@"%@", jsonData);
         
         //This stops the loop
         self->hold = 1;

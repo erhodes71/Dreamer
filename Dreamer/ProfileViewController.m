@@ -68,8 +68,7 @@
     //General information hold
     feedLoaded = 0;
     
-    //Initialize user general data
-    userID = @"";
+    
     
     
     //Initialize arrays for table view
@@ -90,8 +89,15 @@
     //This is test information
     //Make sure to change
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString* user_ID = [prefs stringForKey:@"userID"];
+    
+    
+    //Initialize user general data
+    userID = user_ID;
+    
     //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
-    [self loadUserData:@"eric2"];
+    [self loadUserData:userID];
     
     //It will change to 1 if the information is returned
     while(feedLoaded == 0);
@@ -210,8 +216,15 @@
     //This is test information
     //Make sure to change
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString* user_ID = [prefs stringForKey:@"userID"];
+    
+    
+    //Initialize user general data
+    userID = user_ID;
+    
     //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
-    [self loadUserData:@"eric2"];
+    [self loadUserData:userID];
     
     //It will change to 1 if the information is returned
     while(feedLoaded == 0);
@@ -487,17 +500,32 @@
 }
 
 
+//This is currently being a sign-out feature
+//      TODO: Please change before continue
+//            Currently is going to clear the user data
 - (IBAction)signInButtonPressed:(id)sender {
     
     //Adds singIn View Controller view to the profile view
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    /*UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
     [self addChildViewController:signInViewController];
     [self.view addSubview:signInViewController.view];
+     */
     
     //Hides the buttons
-    [(RootViewController*)self.parentViewController hideButtons_side2];
+    //[(RootViewController*)self.parentViewController hideButtons_side2];
+    
+    
+    //-------- CLEAR DATA HERE --------
+    //Save the data
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    //Save data
+    [prefs setObject:@"" forKey:@"userID"];
+    [prefs setObject:@"" forKey:@"password"];
+    [prefs setObject:@"" forKey:@"token"];
+    
     
     
 }

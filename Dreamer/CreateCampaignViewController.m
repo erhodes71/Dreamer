@@ -134,9 +134,17 @@
         
         //TODO: Make loaded data
         //Make these values static for the moment
+        
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        NSString* user_ID = [prefs stringForKey:@"userID"];
+        NSString* user_Name = [prefs stringForKey:@"name"];
+        
         NSString* userName = @"Eric Rhodes";
+        //Get the name
         userName = [userName stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
-        NSString* userID = @"eric2";
+        NSString* userID = user_ID;
+        //Get the userID
         
         NSString* title = _titleTextField.text;
         title = [title stringByReplacingOccurrencesOfString:@" " withString:@"%20"];

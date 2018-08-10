@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 
+-(void)finishAccountCreation;
+
 
 
 @end

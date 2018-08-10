@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateNewAccountViewController : UIViewController
+@interface CreateNewAccountViewController : UIViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *nameLable;
+@property (weak, nonatomic) IBOutlet UITextField *userIDLable;
+@property (weak, nonatomic) IBOutlet UITextField *passwordEntery1;
+@property (weak, nonatomic) IBOutlet UITextField *passwordEntery2;
+@property (weak, nonatomic) IBOutlet UITextField *handle;
+@property (weak, nonatomic) IBOutlet UITextField *address;
+
+
+
+
 
 @end
