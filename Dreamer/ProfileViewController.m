@@ -22,6 +22,9 @@
     //The campaign that is selected
     UIViewController* campaignInfoViewController;
     
+    //Sign-In View Controller
+    UIViewController* signInViewController;
+    
     NSMutableArray *data;
     
     //Values that hold general User data
@@ -482,5 +485,36 @@
     return 135;//Might have to change the size
     // This is just Programatic method you can also do that by xib !
 }
+
+
+- (IBAction)signInButtonPressed:(id)sender {
+    
+    //Adds singIn View Controller view to the profile view
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    signInViewController = [storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+    [self addChildViewController:signInViewController];
+    [self.view addSubview:signInViewController.view];
+    
+    //Hides the buttons
+    [(RootViewController*)self.parentViewController hideButtons_side2];
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

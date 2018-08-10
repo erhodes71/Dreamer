@@ -26,6 +26,8 @@
 		C5819CBE211B4F740008160C /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5819CBD211B4F740008160C /* back_button.png */; };
 		C5868E52210A70A300E46C44 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5868E51210A70A300E46C44 /* RootViewController.m */; };
 		C5944CD6211C9A8400533059 /* UserViewOfProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5944CD5211C9A8400533059 /* UserViewOfProfileViewController.m */; };
+		C5AB8A43211D1FCF0050D130 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB8A42211D1FCF0050D130 /* SignInViewController.m */; };
+		C5AB8A46211D23BD0050D130 /* CreateNewAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AB8A45211D23BD0050D130 /* CreateNewAccountViewController.m */; };
 		C5C2475F211B8E1900598D5E /* CampaignPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */; };
 		C5CB58EB2112B8400088B04A /* ExternalContent_Location_1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */; };
 		C5CB58EE2112BBD80088B04A /* CreateCampaignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5CB58ED2112BBD80088B04A /* CreateCampaignViewController.m */; };
@@ -85,6 +87,10 @@
 		C5868E51210A70A300E46C44 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		C5944CD4211C9A8400533059 /* UserViewOfProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewOfProfileViewController.h; sourceTree = "<group>"; };
 		C5944CD5211C9A8400533059 /* UserViewOfProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewOfProfileViewController.m; sourceTree = "<group>"; };
+		C5AB8A41211D1FCF0050D130 /* SignInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		C5AB8A42211D1FCF0050D130 /* SignInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		C5AB8A44211D23BD0050D130 /* CreateNewAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateNewAccountViewController.h; sourceTree = "<group>"; };
+		C5AB8A45211D23BD0050D130 /* CreateNewAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateNewAccountViewController.m; sourceTree = "<group>"; };
 		C5C2475D211B8E1900598D5E /* CampaignPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CampaignPageViewController.h; sourceTree = "<group>"; };
 		C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampaignPageViewController.m; sourceTree = "<group>"; };
 		C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExternalContent_Location_1.storyboard; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				C5C2475E211B8E1900598D5E /* CampaignPageViewController.m */,
 				C512E5FF20FD1C96004E8F82 /* Main.storyboard */,
 				C5CB58EA2112B8400088B04A /* ExternalContent_Location_1.storyboard */,
+				C5AB8A44211D23BD0050D130 /* CreateNewAccountViewController.h */,
+				C5AB8A45211D23BD0050D130 /* CreateNewAccountViewController.m */,
+				C5AB8A41211D1FCF0050D130 /* SignInViewController.h */,
+				C5AB8A42211D1FCF0050D130 /* SignInViewController.m */,
 				C5E84B3C211CC5DC00CCD4F1 /* ContributeViewController.h */,
 				C5E84B3D211CC5DC00CCD4F1 /* ContributeViewController.m */,
 				C5944CD4211C9A8400533059 /* UserViewOfProfileViewController.h */,
@@ -363,6 +373,8 @@
 				C5868E52210A70A300E46C44 /* RootViewController.m in Sources */,
 				C5CDEB5D2107B28D0021807E /* ProfileTableViewCell.m in Sources */,
 				C512E60920FD1C97004E8F82 /* main.m in Sources */,
+				C5AB8A46211D23BD0050D130 /* CreateNewAccountViewController.m in Sources */,
+				C5AB8A43211D1FCF0050D130 /* SignInViewController.m in Sources */,
 				C512E5FB20FD1C96004E8F82 /* AppDelegate.m in Sources */,
 				C5CDEB592107B1450021807E /* ProfileViewController.m in Sources */,
 				C53CFDF32104F19400A8EF6A /* mainViewController.m in Sources */,

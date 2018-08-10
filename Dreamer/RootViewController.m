@@ -29,11 +29,168 @@
     
     UIViewController* extraViewController;
     
+    
+    UIViewController* signInViewController;
+    
+    int hold;
+    
+    NSString* returnValue;
+
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Set hold to 0 for sending the requests
+    hold = 0;
+    
+    
+    //Set the return value to nothing
+    returnValue = @"";
+
+    
+    [self signInCheck];
+    
+}
+
+-(void)signInCheck
+{
+    
+    //--------------------------------------
+    //Load the user data from the device
+    
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    //Save data
+    //[prefs setObject:@"TextToSave" forKey:@"keyToFindText"];
+    
+    
+    //Load data
+    //NSString *textToLoad = [prefs stringForKey:@"keyToFindText"];
+    
+    
+    //Get the user information
+    NSString *userID = [prefs stringForKey:@"userID"];
+    NSString *password = [prefs stringForKey:@"password"];
+    NSString *token = [prefs stringForKey:@"token"];
+    
+    //Check if there is a value there
+    if(userID == NULL)
+    {
+        NSLog(@"User is not logged in...");
+        
+        //Go to the login in screen
+        
+        //Add another view controller "SignInViewController"
+        signInViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+        [self addChildViewController:signInViewController];
+        [self.view addSubview:signInViewController.view];
+        
+        
+    }else{
+        
+        //Check if the token is good
+        //Request here
+        [self checkIfTokenIsCorrect:userID :token];
+        
+        //While the request is happening
+        while(hold==0);
+        
+        //Sets it back to 0
+        hold = 0;
+        
+        
+        //If the token works, then
+        //Good to go
+        if([returnValue isEqualToString:@"true"])
+        {
+            [self finishInitialization];
+        }else{
+            //Else
+            //Re-Sign-In
+            
+            //Add another view controller "SignInViewController"
+            signInViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SignInViewController"];
+            [self addChildViewController:signInViewController];
+            [self.view addSubview:signInViewController.view];
+            
+            
+        }
+        
+        //Sets it back to the origional value
+        returnValue = @"";
+        
+        
+    }
+}
+
+-(void)checkIfTokenIsCorrect: (NSString*)userID: (NSString*)token
+{
+    //Send request to the server
+    
+    //erhodes.oucreate.com/Dreamer/checkTokenStatus.php?userID=eric4&token=PwqHZV4pmsSCnciru6JpAZeDD59WmqlbWLTWHYl3qeFOqYfV4Y
+    
+    
+    //This is the url to use
+    NSString* url = [NSString stringWithFormat:@"erhodes.oucreate.com/Dreamer/checkTokenStatus.php?userID=%@&token=%@",userID,token];
+    
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:url]];
+    [request setHTTPMethod:@"GET"];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+        NSLog(@"requestReply: %@", requestReply);//This works well in getting the data
+        
+        //Convert the data to a managable format
+        NSData* jsonData = [requestReply dataUsingEncoding:NSUTF8StringEncoding];
+        //NSError *error = nil;
+        NSDictionary *responseObj = [NSJSONSerialization
+                                     JSONObjectWithData:jsonData
+                                     options:0
+                                     error:&error];
+        
+        if(! error) {
+            
+            if([requestReply isEqualToString:@"true"])
+            {
+                self->returnValue = @"true";
+                
+            }else{
+                self->returnValue = @"false";
+
+            }
+            
+            
+        } else {
+            NSLog(@"Error in parsing JSON");
+        }
+        //NSLog(@"%@", jsonData);
+        
+        //This stops the loop
+        self->hold = 1;
+      
+        
+        
+        
+        
+        
+    }] resume];
+    
+    
+    
+}
+
+
+//Initializes the rest of the views
+-(void)finishInitialization
+{
+    
     
     //This is how you can manage multiple views on one view controller
     //  This is also how you get the view controller from the storyboard.
@@ -62,8 +219,11 @@
     [self.view bringSubviewToFront:_mainButton];
     [self.view bringSubviewToFront:_globeButton];
     [self.view bringSubviewToFront:_portfolioButton];
-
+    
 }
+
+
+
 
 
 

@@ -98,8 +98,16 @@
     //[profileView setHidden:true];
     
     
+
+
+    
+    
+    
+    
+    
     //----------------------------------------
     //Load the data
+    
     
     //start = false;
     
@@ -159,6 +167,25 @@
     
     //[self checkIfLoggedIn];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -(void)checkIfLoggedIn
 {
