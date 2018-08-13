@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dreamer/CampaignPageViewController.h"
-            timestampString = "555533935.134897"
+            timestampString = "555626822.420318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "CampaignPageViewController"
             landmarkType = "2">
          </BreakpointContent>

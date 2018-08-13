@@ -56,11 +56,17 @@
     //  Same function as the feedLoaded variable
     int hold;
     
+    
+    int indexCounter;
+    
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    indexCounter = 0;
+    
     
     //The initialization of the data array
     data = [NSMutableArray arrayWithObjects:nil];
@@ -134,6 +140,11 @@
     
 }
 
+-(void)setSelectedIndex
+{
+    
+}
+
 
 //--- To get current index items ---
 
@@ -188,6 +199,9 @@
 
 -(void)initializeViewController
 {
+    //Sets back to 0
+    indexCounter = 0;
+    
     //The initialization of the data array
     data = [NSMutableArray arrayWithObjects:nil];
     
@@ -411,7 +425,6 @@
             self->campaigns = [campaig_combined componentsSeparatedByString:@","];
 
             
-            self->feedLoaded = 1;
             
             
             
@@ -421,6 +434,9 @@
         } else {
             NSLog(@"Error in parsing JSON");
         }
+        
+        self->feedLoaded = 1;
+
         
         
         
@@ -457,6 +473,9 @@
     cell.percentage.text = [percentData objectAtIndex:indexPath.row];
     cell.number.text = [numberData objectAtIndex:indexPath.row];
     
+    //NSLog(@"TEST %i",indexCounter);
+    cell.tag = indexCounter;
+    indexCounter++;
     
     return cell;
 }
@@ -467,7 +486,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%ld", (long)indexPath.row);
-    NSLog(@"%@", currentIndex);
+    //NSLog(@"%@", currentIndex);
     
     currentIndex = (int)indexPath.row;
     
@@ -497,6 +516,12 @@
 {
     return 135;//Might have to change the size
     // This is just Programatic method you can also do that by xib !
+}
+
+//Get the user ID of the user
+-(NSString*) getUserID:(int)indexToUse
+{
+    return idData[indexToUse];
 }
 
 

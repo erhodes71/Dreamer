@@ -22,6 +22,8 @@
 		C53CFDFC210511D600A8EF6A /* mainFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C53CFDFB210511D600A8EF6A /* mainFeedTableViewCell.xib */; };
 		C53CFDFF2105127200A8EF6A /* mainFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */; };
 		C53CFE012106A36A00A8EF6A /* globe_Dreamer.png in Resources */ = {isa = PBXBuildFile; fileRef = C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */; };
+		C54F3567211E0E9200251551 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = C54F3566211E0E9100251551 /* heart.png */; };
+		C54F3569211E0E9500251551 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = C54F3568211E0E9500251551 /* redo.png */; };
 		C574FA2421080604000881D1 /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C574FA2321080604000881D1 /* user-icon.png */; };
 		C5819CBE211B4F740008160C /* back_button.png in Resources */ = {isa = PBXBuildFile; fileRef = C5819CBD211B4F740008160C /* back_button.png */; };
 		C5868E52210A70A300E46C44 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5868E51210A70A300E46C44 /* RootViewController.m */; };
@@ -81,6 +83,8 @@
 		C53CFDFD2105127200A8EF6A /* mainFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainFeedTableViewCell.h; sourceTree = "<group>"; };
 		C53CFDFE2105127200A8EF6A /* mainFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainFeedTableViewCell.m; sourceTree = "<group>"; };
 		C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe_Dreamer.png; sourceTree = "<group>"; };
+		C54F3566211E0E9100251551 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		C54F3568211E0E9500251551 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
 		C574FA2321080604000881D1 /* user-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon.png"; sourceTree = "<group>"; };
 		C5819CBD211B4F740008160C /* back_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button.png; sourceTree = "<group>"; };
 		C5868E50210A70A300E46C44 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 				C512E60420FD1C97004E8F82 /* LaunchScreen.storyboard */,
 				C512E60720FD1C97004E8F82 /* Info.plist */,
 				C512E60820FD1C97004E8F82 /* main.m */,
+				C54F3568211E0E9500251551 /* redo.png */,
+				C54F3566211E0E9100251551 /* heart.png */,
 				C5819CBD211B4F740008160C /* back_button.png */,
 				C53CFDED21004CE000A8EF6A /* user_icon.png */,
 				C53CFE002106A36A00A8EF6A /* globe_Dreamer.png */,
@@ -330,8 +336,10 @@
 				C53CFDFC210511D600A8EF6A /* mainFeedTableViewCell.xib in Resources */,
 				C512E60620FD1C97004E8F82 /* LaunchScreen.storyboard in Resources */,
 				C512E60320FD1C97004E8F82 /* Assets.xcassets in Resources */,
+				C54F3567211E0E9200251551 /* heart.png in Resources */,
 				C5FAA66C211A35030069F9AE /* ContributorsTableViewCell.xib in Resources */,
 				C5CDEB5E2107B28D0021807E /* ProfileTableViewCell.xib in Resources */,
+				C54F3569211E0E9500251551 /* redo.png in Resources */,
 				C512E60120FD1C96004E8F82 /* Main.storyboard in Resources */,
 				C5CB58EB2112B8400088B04A /* ExternalContent_Location_1.storyboard in Resources */,
 				C574FA2421080604000881D1 /* user-icon.png in Resources */,

@@ -18,6 +18,8 @@
 @implementation CampaignPageViewController
 {
     UIViewController* userViewOfProfileViewController;
+    UIViewController* contributeViewController;
+    NSString* userID;
 }
 
 - (void)viewDidLoad {
@@ -29,7 +31,7 @@
     //Load the data of the user selected
     //This information can be done through the previous view
     
-    NSString* userID;
+    //NSString* userID;
     NSString* userName;
     NSString* title;
     NSString* description;
@@ -103,6 +105,20 @@
 - (IBAction)contributeButtonPressed:(id)sender {
     //Takes you to a page to 
     
+    
+    
+    //ContributeViewController
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ExternalContent_Location_1" bundle:nil];
+    
+    contributeViewController = [storyboard instantiateViewControllerWithIdentifier:@"ContributeViewController"];
+    [self addChildViewController:contributeViewController];
+    [self.view addSubview:contributeViewController.view];
+    
+    
+    
+    
+    
 }
 
 
@@ -123,6 +139,13 @@
     
         [(ProfileViewController*)self.parentViewController showRootViewButtons];
     }
+}
+
+
+-(NSString*)getUserID
+{
+    
+    return userID;
 }
 
 

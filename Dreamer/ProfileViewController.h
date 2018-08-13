@@ -20,6 +20,11 @@
 
 
 -(void)showRootViewButtons;
+-(NSString*) getUserID;
+
+
+-(NSString*) getUserID:(int)indexToUse;
+-(void)setSelectedIndex;
 
 
 @end

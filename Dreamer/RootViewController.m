@@ -135,7 +135,7 @@
     
     
     //This is the url to use
-    NSString* url = [NSString stringWithFormat:@"erhodes.oucreate.com/Dreamer/checkTokenStatus.php?userID=%@&token=%@",userID,token];
+    NSString* url = [NSString stringWithFormat:@"http://erhodes.oucreate.com/Dreamer/checkTokenStatus.php?userID=%@&token=%@",userID,token];
     
     
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
@@ -147,7 +147,7 @@
         NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
         NSLog(@"requestReply: %@", requestReply);//This works well in getting the data
         
-        if([requestReply isEqualToString:@"true"])
+        if([requestReply isEqualToString:@"True"])
         {
             self->returnValue = @"true";
             

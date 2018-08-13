@@ -58,6 +58,8 @@
         //Load the views
         //Get rid of this one and the superView
         
+        [self setUserDataToSystem];
+        
         //Test to see how the thing loads here
         [self.view setHidden:true];
         [self.view removeFromSuperview];

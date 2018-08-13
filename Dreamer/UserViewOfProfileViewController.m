@@ -13,6 +13,7 @@
 
 #import "UserViewOfProfileViewController.h"
 #import "ProfileTableViewCell.h"
+#import "CampaignPageViewController.h"
 
 @interface UserViewOfProfileViewController ()
 
@@ -79,8 +80,18 @@
     //General information hold
     feedLoaded = 0;
     
+    
+    //NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    //NSString* user_ID = [prefs stringForKey:@"userID"];
+    
+    
+    NSString* user_ID = [(CampaignPageViewController*)self.parentViewController getUserID];
+    
+
+    
+    
     //Initialize user general data
-    userID = @"";
+    userID = user_ID;
     
     
     //Initialize arrays for table view
@@ -102,7 +113,7 @@
     //Make sure to change
     
     //THIS IS WHERE WE STOPPED BECAUSE OF INTERNET ISSUE
-    [self loadUserData:@"eric2"];
+    [self loadUserData:userID];
     
     //It will change to 1 if the information is returned
     while(feedLoaded == 0);

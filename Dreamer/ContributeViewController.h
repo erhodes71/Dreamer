@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContributeViewController : UIViewController
+@interface ContributeViewController : UIViewController <UITextFieldDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITextField *amountTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *percentTextField;
+
+@property (weak, nonatomic) IBOutlet UITextView *commentTextView;
+
+
+
 
 @end
